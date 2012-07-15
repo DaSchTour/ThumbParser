@@ -1,8 +1,8 @@
 <?php
 class ThumbParserHooks {
-	function efThumbParserFunction_Setup( $parser ) {
+	public function efThumbParserFunction_Setup( $parser ) {
 		# Set a function hook associating the "example" magic word with our function
-		$parser->setFunctionHook( 'thumb', 'efThumbParserFunction_Render' );
+		$parser->setFunctionHook( 'thumb', 'ThumbParserHooks::efThumbParserFunction_Render' );
 		return true;
 	}
 	
